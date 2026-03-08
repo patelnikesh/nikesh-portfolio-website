@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikesh Patel</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  <link href="{{ url_for('static', filename='images/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+            <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+            <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+            <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+            <li><a href="#projects"><i class="bi bi-kanban navicon"></i><span>Projects</span></a></li>
+            <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+  
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="{{ url_for('static', filename='images/Home_background.png') }}" alt="Nikesh Patel Background">
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2>Nikesh Patel</h2>
+            <p>I'm <span class="typed" data-typed-items="Student Of Computer Engineering">Student Of Computer Engineering</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1FrbCSewmM/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/np._.84kp" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/nikesh-patel-22a727347/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/patelnikesh" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I am a Computer Engineering student pursuing my Bachelor's degree with an expected graduation in 2028. I have completed a Diploma in Computer Engineering, which built my strong foundation in software development and core programming concepts.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="{{ url_for('static', filename='images/favicon.png') }}" class="img-fluid" alt="Nikesh Patel profile photo">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Student Of Computer Engineering</h2>
+            <p class="fst-italic py-3">
+              I'm deeply interested in Data Science, Artificial Intelligence, and Data Structures & Algorithms. I enjoy solving complex coding challenges, analyzing data, and developing intelligent systems that deliver real-world impact.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>3 April 2007</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="#">Nikesh Patel.com</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Gujarat, INDIA</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's In Engineering</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>patelnikesh347@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Not Available Currently</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+             To apply my technical skills and problem-solving abilities in innovative projects, continue learning emerging technologies, and grow into a skilled Data Scientist and Software Engineer.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Core technical competencies and areas of expertise developed through academic projects and practical experience</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">Expert</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Python skill level: Expert, 90%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Probability & Statistics</span> <i class="val">Advanced</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Probability and Statistics skill level: Advanced, 85%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Machine Learning</span> <i class="val">Intermediate</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Machine Learning skill level: Intermediate, 75%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>Data Structure & Algorithm</span> <i class="val">Advanced</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Data Structure and Algorithm skill level: Advanced, 80%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Web Development (React.js)</span> <i class="val">Intermediate</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Web Development with React.js skill level: Intermediate, 70%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>HTML/CSS/JavaScript</span> <i class="val">Advanced</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML, CSS, and JavaScript skill level: Advanced, 85%"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>My academic journey and professional experiences in computer engineering, showcasing my growth from diploma to bachelor's degree with hands-on project development and internship experiences.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Nikesh Patel</h4>
+              <p><em>I am a Computer Engineering student pursuing my Bachelor's degree with an expected graduation in 2028. I have completed a Diploma in Computer Engineering, which built my strong foundation in software development and core programming concepts.</em></p>
+              <ul>
+                <li>Gujarat, India</li>
+                <li>patelnikesh347@gmail.com</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Diploma In Computer Engineering</h4>
+              <h5>2022 - 2025</h5>
+              <p><em>From <u>Gujarat Technology University</u> At <u>K.D. Polytechnic (Patan)</u></em></p>
+              <p>I have completed Diploma In Computer Engineering with <b>8.79 CGPA</b> and <b>two internship experiences</b> in <b>Web Development</b>.</p>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Bachelor's Degree in Computer Engineering</h4>
+              <h5>2025 - Pursuing</h5>
+              <p><em>From <u>Gujarat Technological University</u> At <u>Gujarat Power Engineering And Research Institute (Mehsana, Mevad Toll Tax)</u></em></p>
+              <p>I am now pursuing my Bachelor's in Engineering to learn and explore Computer Engineering in depth with an expected graduation in 2028.</p>
+            </div><!-- End Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Gained Experience During Diploma</h4>
+              <h5>2022 - 2025</h5>
+              <ul>
+                <li><strong>Two Internships:</strong></li>
+              </ul>
+              <ul>
+                <li><strong>Internship 1: Web Design</strong>
+                  <ul>
+                    <li>Explored <strong>HTML, CSS, and JavaScript fundamentals</strong></li>
+                    <li>Learned <strong>website designing principles</strong></li>
+                    <li>Internship Project: Designed a <strong>Facebook clone website</strong></li>
+                  </ul>
+                </li>
+                <li><strong>Internship 2: React.js Development</strong>
+                  <ul>
+                    <li>Learned the <strong>React.js framework</strong></li>
+                    <li>Gained experience in <strong>API fetching and integration using React.js</strong></li>
+                    <li>Internship Project: <strong>Developed a dynamic website with API integration using React.js</strong></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul>
+                <li><strong>Academic Projects Developed:</strong>
+                  <ol>
+                    <li>Tic Tac Toe Game Using Python</li>
+                    <li>Face Recognition Attendance System With Email Record Sharing Using Python</li>
+                    <li>Personal AI Assistant in Python for Basic Task Automation</li>
+                  </ol>
+                </li>
+                <li><strong>Hackathon Project:</strong>
+                  <ol>
+                    <li>GPS-Based Attendance Monitoring System Using PHP</li>
+                  </ol>
+                </li>
+                <li>Participated In Finishing School Program</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Gaining Experience During Bachelor's:</h4>
+              <h5>2025 - Pursuing</h5>
+              <p><em>Currently focused on advanced coursework and exploring opportunities in Data Science and AI</em></p>
+              <ul>
+                <li>Deepening knowledge in Data Science, Machine Learning, and AI</li>
+                <li>Working on advanced DSA problems and competitive programming</li>
+                <li>Seeking opportunities for research projects and internships</li>
+              </ul>
+            </div><!-- End Resume Item -->
+          </div>
+        </div>  
+      </div>
+
+    </section><!-- /Resume Section -->
+<!-- Projects Section -->
+<section id="projects" class="projects section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>A showcase of my academic projects, internship work, and personal development initiatives demonstrating my skills in web development, Python programming, and AI applications.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="projects-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-python">Python</li>
+        <li data-filter=".filter-web">Web Development</li>
+        <li data-filter=".filter-php">PHP</li>  
+      </ul><!-- End Projects Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Python Projects -->
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-python">
+          <img src="{{ url_for('static', filename='images/portfolio/Face-Recognition-Attendance System.jpg') }}" class="img-fluid" alt="Face Recognition Attendance System">
+          <div class="projects-info">
+            <h4>Face Recognition Attendance System</h4>
+            <p>AI-powered attendance tracking with email notifications</p>
+            <a href="{{ url_for('static', filename='images/portfolio/Face-Recognition-Attendance System.jpg') }}" title="Face Recognition Attendance System" data-gallery="projects-gallery-python" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-python">
+          <img src="{{ url_for('static', filename='images/portfolio/personal ai assistant.png') }}" class="img-fluid" alt="Personal AI Assistant">
+          <div class="projects-info">
+            <h4>Personal AI Assistant</h4>
+            <p>Python-based assistant for basic task automation</p>
+            <a href="{{ url_for('static', filename='images/portfolio/personal ai assistant.png') }}" title="Personal AI Assistant" data-gallery="projects-gallery-python" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-python">
+          <img src="{{ url_for('static', filename='images/portfolio/Tic_tac_toe.svg') }}" class="img-fluid" alt="Tic Tac Toe Game">
+          <div class="projects-info">
+            <h4>Tic Tac Toe Game</h4>
+            <p>Interactive game built with Python</p>
+            <a href="{{ url_for('static', filename='images/portfolio/Tic_tac_toe.svg') }}" title="Tic Tac Toe Game" data-gallery="projects-gallery-python" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+        <!-- PHP Project -->
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-php">
+          <img src="{{ url_for('static', filename='images/portfolio/gps-based-attendance-system.webp') }}" class="img-fluid" alt="GPS-Based Attendance System">
+          <div class="projects-info">
+            <h4>GPS-Based Attendance System</h4>
+            <p>Location-based attendance monitoring - Hackathon Project</p>
+            <a href="{{ url_for('static', filename='images/portfolio/gps-based-attendance-system.webp') }}" title="GPS-Based Attendance System" data-gallery="projects-gallery-php" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+        <!-- Web Development Projects -->
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-web">
+          <img src="{{ url_for('static', filename='images/portfolio/face book clone.jpg') }}" class="img-fluid" alt="Facebook Clone">
+          <div class="projects-info">
+            <h4>Facebook Clone Website</h4>
+            <p>First internship project - HTML, CSS, JavaScript</p>
+            <a href="{{ url_for('static', filename='images/portfolio/face book clone.jpg') }}" title="Facebook Clone Website" data-gallery="projects-gallery-web" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-web">
+          <img src="{{ url_for('static', filename='images/portfolio/Portfolio Website.png') }}" class="img-fluid" alt="Portfolio Website">
+          <div class="projects-info">
+            <h4>Personal Portfolio Website</h4>
+            <p>Flask-based responsive portfolio</p>
+            <a href="{{ url_for('static', filename='images/portfolio/Portfolio Website.png') }}" title="Portfolio Website" data-gallery="projects-gallery-web" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+        <div class="col-lg-4 col-md-6 projects-item isotope-item filter-python">
+          <img src="{{ url_for('static', filename='images/portfolio/Machine learning model.jpg') }}" class="img-fluid" alt="Machine Learning Model">
+          <div class="projects-info">
+            <h4>Machine Learning Model</h4>
+            <p>Predictive modeling and data science</p>
+            <a href="{{ url_for('static', filename='images/portfolio/Machine learning model.jpg') }}" title="Machine Learning Model" data-gallery="projects-gallery-python" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="#projects" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div><!-- End Project Item -->
+
+      </div><!-- End Projects Container -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Gujarat, India</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:patelnikesh347@gmail.com">patelnikesh347@gmail.com</a></p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-twitter-x flex-shrink-0"></i>
+              <div>
+                <h3>X (Twitter)</h3>
+                <p><a href="https://x.com/patelnikesh347" target="_blank" rel="noopener noreferrer">@patelnikesh347</a></p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-github flex-shrink-0"></i>
+              <div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/patelnikesh" target="_blank" rel="noopener noreferrer">github.com/patelnikesh</a></p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
+
+          <div class="col-lg-8">
+            <form action="/send_email" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required autocomplete="name">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required autocomplete="email">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required autocomplete="off">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required autocomplete="off"></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Nikesh Patel</h3>
+      <p>Aspiring Data Scientist and Software Engineer passionate about solving real-world problems through technology and innovation.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/patelnikesh347" target="_blank" rel="noopener noreferrer" aria-label="Visit my Twitter profile"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/share/1FrbCSewmM/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/np._.84kp" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/nikesh-patel-22a727347/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/patelnikesh" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Nikesh Patel</strong> <span>All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/typed.js/typed.umd.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <!-- Contact Form Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('.php-email-form');
+      
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const loading = form.querySelector('.loading');
+          const errorMessage = form.querySelector('.error-message');
+          const sentMessage = form.querySelector('.sent-message');
+          
+          // Show loading
+          loading.style.display = 'block';
+          errorMessage.style.display = 'none';
+          sentMessage.style.display = 'none';
+          
+          // Get form data
+          const formData = new FormData(form);
+          
+          // Send AJAX request
+          fetch('/send_email', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            loading.style.display = 'none';
+            
+            if (data.success) {
+              sentMessage.style.display = 'block';
+              form.reset();
+              
+              // Hide success message after 5 seconds
+              setTimeout(() => {
+                sentMessage.style.display = 'none';
+              }, 5000);
+            } else {
+              errorMessage.textContent = data.message || 'An error occurred. Please try again.';
+              errorMessage.style.display = 'block';
+            }
+          })
+          .catch(error => {
+            loading.style.display = 'none';
+            errorMessage.textContent = 'Failed to send message. Please try again later.';
+            errorMessage.style.display = 'block';
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
