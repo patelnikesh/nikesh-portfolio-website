@@ -1,12 +1,11 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 import smtplib
 from email.message import EmailMessage
 import os
 
 app = Flask(__name__)
 
-# It is highly recommended to set these in the Render "Environment" tab
-# instead of writing them directly in the code.
+# Load secure environment variables
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 
@@ -17,18 +16,14 @@ def home():
 @app.route('/send_email', methods=['POST'])
 def send_email():
     try:
-        # Get data from form
-        name = request.form.get('name')
-        email = request.form.get('email')
-        message = request.form.get('message')
-
-        if not EMAIL_USER or not EMAIL_PASS:
-            return jsonify({"status": "error", "message": "Server configuration missing (API Keys)"}), 500
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
 
         msg = EmailMessage()
         msg['Subject'] = f'New message from {name}'
         msg['From'] = EMAIL_USER
-        msg['To'] = EMAIL_USER # You receive the email
+        msg['To'] = EMAIL_USER
 
         msg.set_content(
             f"New Contact Form Message\n\n"
@@ -37,20 +32,21 @@ def send_email():
             f"Message:\n{message}"
         )
 
-        # Gmail SMTP Server Connection
+        # Gmail SMTP Server
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
-            server.starttls()  # Upgrade the connection to secure
+            server.starttls()
             server.login(EMAIL_USER, EMAIL_PASS)
             server.send_message(msg)
 
-        return jsonify({"status": "success", "message": "Email sent successfully!"}), 200
+        return "Email sent successfully!"
 
     except Exception as e:
-        print(f"Deployment Error: {str(e)}") # This will show in Render Logs
-        return jsonify({"status": "error", "message": str(e)}), 500
+        return f"Error: {str(e)}"
+
 
 if __name__ == "__main__":
-    # Render uses the PORT environment variable. 
-    # We must use 0.0.0.0 to allow external traffic.
+    # configurable host/port/debug via environment; keep use_reloader=False to avoid duplicate side-effects
+    HOST = os.getenv("FLASK_RUN_HOST", "127.0.0.1")
     PORT = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=PORT)
+    DEBUG = os.getenv("FLASK_DEBUG", "1").lower() in ("1", "true", "yes")
+    app.run(host=HOST, port=PORT, debug=DEBUG, use_reloader=False)
