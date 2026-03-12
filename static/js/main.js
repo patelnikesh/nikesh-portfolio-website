@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -11,16 +10,13 @@
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
-
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.header-show')) {
         headerToggle();
       }
     });
-
   });
-
 
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
@@ -37,7 +33,6 @@
       preloader.remove();
     });
   }
-
 
   let scrollTop = document.querySelector('.scroll-top');
 
@@ -57,7 +52,6 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
-
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -67,7 +61,6 @@
     });
   }
   window.addEventListener('load', aosInit);
-
 
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
@@ -82,14 +75,8 @@
     });
   }
 
-  /**
-   * Initiate Pure Counter
-   */
   new PureCounter();
 
-  /**
-   * Animate the skills items on reveal
-   */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
     new Waypoint({
@@ -104,16 +91,10 @@
     });
   });
 
-  /**
-   * Initiate glightbox
-   */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  /**
-   * Init isotope layout and filters
-   */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -141,18 +122,13 @@
         }
       }, false);
     });
-
   });
 
-  /**
-   * Init swiper sliders
-   */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
-
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
@@ -160,12 +136,8 @@
       }
     });
   }
-
   window.addEventListener("load", initSwiper);
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -181,9 +153,6 @@
     }
   });
 
-  /**
-   * Navmenu Scrollspy
-   */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
@@ -202,5 +171,46 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Contact Form Handler
+   */
+  const contactForm = document.querySelector('.php-email-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const errorMsg = contactForm.querySelector('.error-message');
+      const sentMsg  = contactForm.querySelector('.sent-message');
+      const loading  = contactForm.querySelector('.loading');
+
+      // Reset all states
+      errorMsg.style.display = 'none';
+      sentMsg.style.display  = 'none';
+      loading.style.display  = 'block';
+
+      try {
+        const res  = await fetch('/send_email', { method: 'POST', body: formData });
+        const data = await res.json();
+
+        loading.style.display = 'none';
+
+        if (data.status === 'success') {
+          sentMsg.textContent   = '✅ Your message has been sent. Thank you!';
+          sentMsg.style.display = 'block'; // 🟢 Green box
+          contactForm.reset();
+        } else {
+          errorMsg.textContent   = '❌ ' + data.message;
+          errorMsg.style.display = 'block'; // 🔴 Red box
+        }
+
+      } catch (err) {
+        loading.style.display  = 'none';
+        errorMsg.textContent   = '❌ Failed to send message. Please try again later.';
+        errorMsg.style.display = 'block';
+      }
+    });
+  }
 
 })();
